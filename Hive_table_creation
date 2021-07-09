@@ -1,0 +1,110 @@
+NOTE: Make sure all the csv's present in in your local.
+
+=============== Create hive table for intstallments_payments.csv ==========================
+
+1. hdfs dfs -mkdir intstallment_payments
+2. hdfs dfs -put installments_payments.csv /user/saurabhdhoot95/intstallment_payments/intstallments_payments.csv
+3. hdfs dfs -ls intstallment_payments
+4. Execute following command
+
+create table intstallments_payments(
+SK_ID_PREV string,
+SK_ID_CURR string,
+NUM_INSTALMENT_VERSION string,
+NUM_INSTALMENT_NUMBER string,
+DAYS_INSTALMENT string,
+DAYS_ENTRY_PAYMENT string,
+AMT_INSTALMENT string,
+AMT_PAYMENT string)
+row format delimited
+fields terminated by ','
+location '/user/saurabhdhoot95/intstallment_payments/';
+
+
+=============== Create hive table for POS_CASH_balance.csv ==========================
+
+1. hdfs dfs -mkdir pos_cash
+2. hdfs dfs  -put  POS_CASH_balance.csv /user/saurabhdhoot95/pos_cash/pos_cash.csv
+3. hdfs dfs -ls pos_cash
+4. Execute following command
+
+	create external table pos_cash_balance(
+	SK_ID_PREV string,
+	SK_ID_CURR string,
+	MONTHS_BALANCE string,
+	CNT_INSTALMENT string,
+	CNT_INSTALMENT_FUTURE string,
+	NAME_CONTRACT_STATUS string,
+	SK_DPD string,
+	SK_DPD_DEF string)
+	row format delimited
+	fields terminated by ','
+	location '/user/saurabhdhoot95/pos_cash/';
+	
+==============Create hive table for credit_card_balance.csv=============================
+
+1. dfs dfs -mkdir cc_balance
+2. hdfs dfs  -put  credit_card_balance.csv /user/saurabhdhoot95/cc_balance/credit_card_balance.csv
+3. hdfs dfs -ls cc_balance
+4. Execute following command
+
+create external table credit_card_balance(
+SK_ID_PREV string,
+SK_ID_CURR string,
+MONTHS_BALANCE string,
+AMT_BALANCE string,
+AMT_CREDIT_LIMIT_ACTUAL string,
+AMT_DRAWINGS_ATM_CURRENT string,
+AMT_DRAWINGS_CURRENT string,
+AMT_DRAWINGS_OTHER_CURRENT string,
+AMT_DRAWINGS_POS_CURRENT string,
+AMT_INST_MIN_REGULARITY string,
+AMT_PAYMENT_CURRENT string,
+AMT_PAYMENT_TOTAL_CURRENT string,
+AMT_RECEIVABLE_PRINCIPAL string,
+AMT_RECIVABLE string,
+AMT_TOTAL_RECEIVABLE string,
+CNT_DRAWINGS_ATM_CURRENT string,
+CNT_DRAWINGS_CURRENT string,
+CNT_DRAWINGS_OTHER_CURRENT string,
+CNT_DRAWINGS_POS_CURRENT string,
+CNT_INSTALMENT_MATURE_CUM string,
+NAME_CONTRACT_STATUS string,
+SK_DPD string,
+SK_DPD_DEF string)
+row format delimited
+fields terminated by ','
+location '/user/saurabhdhoot95/cc_balance/';
+
+
+
+=============== Create hive table for previous_application.csv ==========================
+
+1. hdfs dfs -mkdir previous_application
+2. hdfs dfs  -put  previous_application.csv /user/saurabhdhoot95/previous_application/previous_application.csv
+3. hdfs dfs -ls previous_application
+4. Execute following command
+
+create table previous_application(
+
+)
+row format delimited
+fields terminated by ','
+location '/user/saurabhdhoot95/previous_application/';
+
+
+
+
+
+=============== Table Count ===================
+
+
+name	    						mysql		hive		file
+app_test   							48744	   48744		48745
+app_train  							307511	   307511 	    307512
+bureau 	   							1716428	   1716428      1716429
+b_balance  							27299925   27299925		27299926
+
+installments_payments 						   13605402		13605402
+credit_card_balance							   3840313		3840313
+POS_CASH_balance							   10001359		10001359 
