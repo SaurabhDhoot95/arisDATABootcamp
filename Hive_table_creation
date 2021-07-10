@@ -85,14 +85,46 @@ location '/user/saurabhdhoot95/cc_balance/';
 3. hdfs dfs -ls previous_application
 4. Execute following command
 
-create table previous_application(
-
-)
-row format delimited
-fields terminated by ','
-location '/user/saurabhdhoot95/previous_application/';
-
-
+create external table previous_application(
+SK_ID_PREV string,
+SK_ID_CURR string,
+NAME_CONTRACT_TYPE string,
+AMT_ANNUITY string,
+AMT_APPLICATION string,
+AMT_CREDIT string,
+AMT_DOWN_PAYMENT string,
+AMT_GOODS_PRICE string,
+WEEKDAY_APPR_PROCESS_START string,
+HOUR_APPR_PROCESS_START string,
+FLAG_LAST_APPL_PER_CONTRACT string,
+NFLAG_LAST_APPL_IN_DAY string,
+RATE_DOWN_PAYMENT string,
+RATE_INTEREST_PRIMARY string,
+RATE_INTEREST_PRIVILEGED string,
+NAME_CASH_LOAN_PURPOSE string,
+NAME_CONTRACT_STATUS string,
+DAYS_DECISION string,
+NAME_PAYMENT_TYPE string,
+CODE_REJECT_REASON string,
+NAME_TYPE_SUITE string,
+NAME_CLIENT_TYPE string,
+NAME_GOODS_CATEGORY string,
+NAME_PORTFOLIO string,
+NAME_PRODUCT_TYPE string,
+CHANNEL_TYPE string,
+SELLERPLACE_AREA string,NAME_SELLER_INDUSTRY string,
+CNT_PAYMENT string,
+NAME_YIELD_GROUP string,
+PRODUCT_COMBINATION string,
+DAYS_FIRST_DRAWING string,
+DAYS_FIRST_DUE string,
+DAYS_LAST_DUE_1ST_VERSION string,
+DAYS_LAST_DUE string,
+DAYS_TERMINATION string,
+NFLAG_INSURED_ON_APPROVAL string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION '/user/saurabhdhoot95/previous_application';
 
 
 
@@ -108,3 +140,4 @@ b_balance  							27299925   27299925		27299926
 installments_payments 						   13605402		13605402
 credit_card_balance							   3840313		3840313
 POS_CASH_balance							   10001359		10001359 
+previous_application 							1670215 	1670215
