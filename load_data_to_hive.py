@@ -1,10 +1,9 @@
 import json
 import subprocess
 
-
+#Read cofig.file 
 with open('config.json') as f:
     data = json.load(f)
-
 
 try:
     command = '''sqoop import --connect {connectionstr} --username {id} --password {passwrd} --table {tname} \
@@ -22,4 +21,4 @@ try:
 except Exception as e:
     print(e)
 
-print("Success !!!!!!!!!")
+print("Successfuly table created in hive !!!!!!!!!")
