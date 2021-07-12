@@ -1,0 +1,38 @@
+WEEK-1:
+
+Our WEEK-1 is basically divided into two sessions like theoretical and practical
+
+In theoretical session:
+	1. Our trainer explained each term regarding Big-Data like hadoop architecture and all.	
+	2. Setup for our GCP account as well.
+	
+
+In practical session:
+	Our final goal is to ingest data in to the hive on top of hadoop. So for that we used two approach 
+	
+	Approach 1:
+		Load data in mysql and then to hive there are summary for this	
+		
+		1. Our first task was to upload data from local to cloud for that I use upload file option.
+
+		2. After uploading multiple csv's we have to create the table according each csv fields its 
+		   very difficult to create multiple a column for csv manually so I wrote a script that will
+		   identify your data type and will convert into a table schema as per convert_csv_to_ddl.py
+		   For more detailed info you can go through Mysql_table_creation.txt
+		   
+		3. Then our next task is we need a same table fields in hive as well so I wrote a script for 
+		   the same it will create hive schema. So you need to do manually copy and paste into the hive.
+		   you can use convert_csv_to_hive_ddl.py this script.
+		   
+		4. So after all the successful steps you can verify your records using hive,mysql commands. 
+		
+	Approach 2:
+		Load data to local and then into the hdfs. After into the hive 
+
+		1. Our first task was to upload data from local to cloud for that I use upload file option.
+		
+		2. Then you need a schema to create a table in hive so i wrote a script so it will convert your csv 
+		   CSV headers into hive schema. You can go through convert_csv_to_hive_ddl.py.
+		
+		3. For the more detailed info you can go through Hive_table_creation.txt
+		
