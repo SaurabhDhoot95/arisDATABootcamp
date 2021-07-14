@@ -12,7 +12,18 @@ DAY 2 :
 
 	1. Wrote a script in python to load data from hdfs to spark dataframe using two approches:
 		1. Reading csv files from hdfs and then load into spark dataframe
-		2. Retrieving data from hive table and then load into the spark dataframe
-		
+		2. Retrieving data from hive table and then load into the spark dataframe		
 	2. Perfomed joins operation with the help of spark CLI and to validate the count with help of mysql join.
+	
+DAY 3 :
+	
+	1. Learnt a scala from scratch like difference between val and var.	 
+	2. Perfomed some joins operations to get desired results from the query.	
+	3. Learnt and explored things around scala like val, var ,function declaration, created scala scripts	for 
+	   a smallaer functions as perfomed various operations that are present in scala-basics.txt , 
+	   spark-scala-bank-marketing-project.txt and spark-scala-dataframe.txt
+	4. Perfomed hands on with spark dataframe operation like replace null values with avarage of column.
+	3. Stored desired output in csv on top of hadoop.
+	
+	
 	
