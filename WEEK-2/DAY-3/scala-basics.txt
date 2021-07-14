@@ -1,0 +1,156 @@
+$ spark-shell
+
+println("Hello Big Data")
+ 
+
+scala> println("Hello Big Data")
+
+$ nano HelloBigData.scala
+
+object HelloBigData {
+   def main(args: Array[String]) {
+      println("Hello Big Data") 
+   }
+}
+
+
+scalac HelloBigData.scala
+scala HelloBigData
+
+
+$ spark-shell
+
+10+20
+10-20
+10*30
+10/20
+10.0/20
+20/10
+
+
+res1 + res2 
+
+
+var myVariable1 : Int = 3
+
+var myVariable2 : Double = 3
+
+myVariable1 = "Big Data"
+
+val myValue1 : Int = 3
+
+val myValue1 : Double = 3
+
+val myVal = "Big Data"
+
+myVal. (Press tab)
+
+var variable1 : String = "Big"
+
+val variable2 = s"${variable1} Data"
+
+printf("Examples of integer %d and string %s ",5, "Big Data")
+
+# Array is a fixed size data structure 
+var myArray = Array(10,20,30,40)
+
+myArray(0)
+
+var myArray2 = new Array[String](3)
+myArray2(0) = "a"
+myArray2(1) = "b"
+myArray2(2) = "c"
+
+
+
+
+val myList = List(10,20,30,40)
+
+val myList = List(10,20,"Big Data",40)
+
+myList(0)
+
+myList.  (press tab)
+
+myList.size
+
+(1,2)
+(1, "Big Data",2)
+
+val my_tuple = (1, "Big Data",2)
+
+my_tuple._1
+
+
+val mapValue = Map(("key1",10))
+
+val mapValue = Map(("key1",10),("key2",20))
+
+mapValue("key2")
+
+if (10==10) {
+println("inside if")
+} else if (10==7){
+println("inside else if")
+} else {
+println("inside else")
+}
+
+
+if (10==7) {
+println("inside if")
+} else if (10==10){
+println("inside else if")
+} else {
+println("inside else")
+}
+
+
+if ((10==10) && (7==5)) {
+println("inside if")
+} else if (10==7){
+println("inside else if")
+} else {
+println("inside else")
+}
+
+for( i <- 1 to 10) 
+{ 
+println(i)
+} 	
+
+for( i <- 1 until 5){
+println( i)
+}
+
+
+
+for(i <- List(10,20,30,40)) {
+println(i)
+}
+
+
+
+var i = 1
+while( i < 5 ){
+println (i)
+i= i+1
+}
+
+def sampleFunction () : Unit = {
+println("Big Data")
+}
+
+def sampleFunction2 () : Int = {
+println("Big Data")
+return 3
+}
+
+
+def calaculateSum ( i:Int, j:Int ) : Int = {
+val k = i + j
+return k
+}
+
+
+
