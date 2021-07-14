@@ -1,0 +1,18 @@
+WEEK-2
+
+DAY 1:
+
+	1. In this week we started with Spark introduction.
+	2. After the introduction we perfomed 	some hands on with spark and pyspark
+	3. Created small pipeline which will read csv, perform tranformation and will append 
+	   the tranformed data into a existing table. Everything is written inside python scripts we 
+	   just need into run a single python script and it will perform all the operations.
+
+DAY 2 :
+
+	1. Wrote a script in python to load data from hdfs to spark dataframe using two approches:
+		1. Reading csv files from hdfs and then load into spark dataframe
+		2. Retrieving data from hive table and then load into the spark dataframe
+		
+	2. Perfomed joins operation with the help of spark CLI and to validate the count with help of mysql join.
+	
