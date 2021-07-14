@@ -25,5 +25,5 @@ DAY 3 :
 	4. Perfomed hands on with spark dataframe operation like replace null values with avarage of column.
 	3. Stored desired output in csv on top of hadoop.
 	
-	
-	
+DAY 4 :
+	1. 
