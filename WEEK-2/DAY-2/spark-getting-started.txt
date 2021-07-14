@@ -1,0 +1,53 @@
+hadoop fs -ls
+
+wget https://raw.githubusercontent.com/futurexskill/bigdata/master/retailstore.csv
+
+ls
+
+hadoop fs -mkdir /user/futurexskill2021/
+
+hadoop fs -mkdir /user/futurexskill2021/data
+
+hadoop fs -put retailstore.csv /user/futurexskill2021/data
+
+
+hadoop fs -cat retailstore.csv
+
+hadoop fs -cat /user/futurexskill2021/data/retailstore.csv
+
+===========Hive ============================
+hive
+
+create database if not exists futurex;
+
+show databases;
+
+use futurex;
+
+create table futurex_course (age INT, salary FLOAT,gender String,country String, purchased String) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LOCATION '/user/saurabhdhoot95/demo/' TBLPROPERTIES ("skip.header.line.count"="1") ;
+
+
+
+========================Python=================================
+pyspark
+
+
+spark.read.option("header",True).csv("/user/saurabhdhoot95/demo/retailstore.csv").show()
+
+spark.sql("select * from futurex.retailcust").show()
+
+
+=======================Scala======================================
+
+spark-shell
+
+
+spark.read.option("header","True").csv("/user/saurabhdhoot95/demo/retailstore.csv").show()
+
+spark.sql("select * from futurex.retailcust").show()
+======================================
+
+
+ create table futurex_course (
+ age INT, 
+ salary FLOAT(20,10),gender VARCHAR(255),country VARCHAR(255), purchased VARCHAR(255));
