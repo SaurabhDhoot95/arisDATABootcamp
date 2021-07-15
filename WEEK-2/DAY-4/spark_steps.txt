@@ -1,0 +1,54 @@
+1. Read 8 datasets processed. Refer to dataset document shared.
+2. Create spark job to perform below steps -
+step1 - Read 4 datasets from HDFS into dataframes -->> Done
+Step 2 - Read 4 hive tables from HDFS using sql context in dataframes -->> Done 
+Step 3 - Refer to Dataset document and ER diagram shared for joining keys -->> Done
+Step 4 - Create joined datasets, dataframes as per joining columns given in diagram 
+step 5 - get count of records for each dataframe post joining 
+step 6 - print counts of each dataframes joined 
+
+
+================mysql========================
+
+select t1.SK_ID_CURR, t1.AMT_INCOME_TOTAL, t2.SK_ID_BUREAU,t2.CREDIT_CURRENCY from new_tbl_application_test t1 inner join bureau t2 on t2.SK_ID_CURR=t1.SK_ID_CURR limit 50;
+select count(*) from new_tbl_application_test t1 inner join bureau t2 on t2.SK_ID_CURR=t1.SK_ID_CURR;
+>> 251103
+
+select count(*) from bureau t1 inner join new_bureau_balance1 t2 on t2.SK_ID_BUREAU=t1.SK_ID_BUREAU;
+>> 24179741
+
+
+=============hive==============================
+
+select count(*) from app_test t1 inner join bureau t2 on t1.sk_id_curr=t2.sk_id_curr;
+>> 251103
+
+select count(*) from bureau t1 inner join b_balance t2 on t1.sk_id_bureau = t2.sk_id_bureau;
+>> 24179741 
+
+select count(*) from app_test t1 inner join previous_application t2 on t1.sk_id_curr = t2.sk_id_curr;
+>> 256513
+
+select count(*) from previous_application t1 inner join intstallments_payments t2 on t1.sk_id_prev = t2.sk_id_prev;
+>> 12354576 
+
+select count(*) from previous_application t1 inner join credit_card_balance t2 on t1.sk_id_prev = t2.sk_id_prev;
+>> 2757497
+
+
+select count(*) from app_test t1 inner join pos_cash_balance t2 on t1.sk_id_curr = t2.sk_id_curr;
+>> 1457983
+
+select count(*) from app_test t1 inner join credit_card_balance t2 on t1.sk_id_curr = t2.sk_id_curr;
+>> 612347
+
+=====pyspark=======
+
+
+count1 = app_test.join(bureau,app_test.sk_id_curr ==  bureau.sk_id_curr,"inner").count()
+count2 = bureau.join(b_balance,bureau.sk_id_bureau ==  b_balance.sk_id_bureau,"inner").count()
+count3 = app_test.join(previous_application,app_test.sk_id_curr ==  previous_application.sk_id_curr,"inner").count()
+count4 = previous_application.join(intstallments_payments,previous_application.sk_id_prev ==  intstallments_payments.sk_id_prev,"inner").count()
+count5 = previous_application.join(credit_card_balance,previous_application.sk_id_prev ==  credit_card_balance.sk_id_prev,"inner").count()
+count6 = app_test.join(pos_cash_balance,app_test.sk_id_curr ==  pos_cash_balance.sk_id_curr,"inner").count()
+count7 = app_test.join(credit_card_balance,app_test.sk_id_curr ==  credit_card_balance.sk_id_curr,"inner").count()
