@@ -26,5 +26,9 @@ DAY 3 :
 	3. Stored desired output in csv on top of hadoop.
 	
 DAY 4 :
-	1. 
-	2.
+
+	1. Wrote a python script that will read data from csv and as well as from hive tables and stored into the spark dataframe.	   
+	2. After storing it into the dataframe perfomed join operations on the basis of given ER-Diagram and  this is returning the count for 
+	   our matching records.
+	3. Validated the count with mysql queries.
+	4. Hands on are present in spark_steps.txt
