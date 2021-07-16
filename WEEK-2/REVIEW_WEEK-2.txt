@@ -32,3 +32,11 @@ DAY 4 :
 	   our matching records.
 	3. Validated the count with mysql queries.
 	4. Hands on are present in spark_steps.txt
+	
+	
+DAY 5:
+
+	1. Create a data pipe line script which will read data from hive table.
+	2. Perfomed join operations as per ER-Diagram.
+	3. Then processed the data as per requirement and stored the processed data in new table on the top of hive.
+	4. python scripts are availbale in DAY-5 folder.
