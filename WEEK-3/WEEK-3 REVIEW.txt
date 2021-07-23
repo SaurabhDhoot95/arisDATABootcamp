@@ -2,3 +2,27 @@ DAY 1:
 	1. Introduced with new things like maven concepts, IntelliJ IDEA for best practice of scala scripting.
 	2. Did set up for IntelliJ IDEA.
 	3. Performed two sample project to get better understanding of of this that you can see in DAY-1 folder.
+	
+
+DAY 2:
+	1. Setup project in intellij for two main purpose: 
+		1. Crete some sample data in scala and convert it into a dataframe then stored as output csv file .
+		2. Create some dummy records and stored as table in hive using scala scripts.
+	2. You can review the code in DAY-2 folder.
+
+DAY 3:
+	1. Our trainer gives us overview of standard coding practices as well as exceptional handlings in scala 
+	   and our task was to convert a single script into a proper format as per industy standards.
+	2. Implemented logers into our code so that we can track events that happen when some software runs.
+	3. You can review code in DAY-3 folder
+	
+DAY 4:
+	1. Our task was to read data from postgresql database and show this on our console.
+	2. Added records to hive table using scala scripting.
+	3. Added some records to the hive table and did some transfomations after saved those 
+	   transformed records into our postgresql database.(As like export function from hive => mysql)
+	   using scala scripting.
+	4. You can review code in DAY-4 folder.
+	
+DAY 5:
+
