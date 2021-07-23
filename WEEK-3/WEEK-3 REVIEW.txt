@@ -1,0 +1,4 @@
+DAY 1:
+	1. Introduced with new things like maven concepts, IntelliJ IDEA for best practice of scala scripting.
+	2. Did set up for IntelliJ IDEA.
+	3. Performed two sample project to get better understanding of of this that you can see in DAY-1 folder.
