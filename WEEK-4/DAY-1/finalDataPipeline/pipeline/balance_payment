@@ -1,0 +1,72 @@
+sk_id_prev int,
+sk_id_curr int
+months_balance
+amt_balance
+amt_credit_limit_actual
+amt_drawings_atm_current
+amt_drawings_current
+amt_drawings_other_current
+amt_drawings_pos_current
+amt_inst_min_regularity
+amt_payment_current
+amt_payment_total_current
+amt_receivable_principal
+amt_recivable
+amt_total_receivable
+name_contract_status
+sk_dpd
+sk_dpd_def
+num_instalment_number
+days_instalment
+days_entry_payment
+amt_instalment
+amt_payment
+months_balance
+cnt_instalment
+cnt_instalment_future
+
+
+sk_id_curr: integer (nullable = true)
+ |-- sk_id_bureau: integer (nullable = true)
+ |-- credit_active: string (nullable = true)
+ |-- credit_currency: string (nullable = true)
+ |-- days_credit: integer (nullable = true)
+ |-- credit_day_overdue: integer (nullable = true)
+ |-- days_credit_enddate: double (nullable = true)
+ |-- days_enddate_fact: double (nullable = true)
+ |-- amt_credit_max_overdue: double (nullable = true)
+ |-- cnt_credit_prolong: integer (nullable = true)
+ |-- amt_credit_sum: double (nullable = true)
+ |-- amt_credit_sum_debt: double (nullable = true)
+ |-- amt_credit_sum_limit: double (nullable = true)
+ |-- amt_credit_sum_overdue: double (nullable = true)
+ |-- credit_type: string (nullable = true)
+ |-- days_credit_update: integer (nullable = true)
+ |-- amt_annuity: double (nullable = true)
+ |-- sk_id_bureau: integer (nullable = true)
+ |-- month_balance: byte (nullable = true)
+ |-- status: string (nullable = true)
+ |-- id: integer (nullable = true)
+
+
+create table export_balance_bureau(
+sk_id_curr int,
+sk_id_bureau int,
+credit_active varchar(255),
+credit_currency varchar(255),
+days_credit int,
+credit_day_overdue int,
+days_credit_enddate FLOAT(20,10),
+days_enddate_fact FLOAT(20,10),
+amt_credit_max_overdue FLOAT(20,10),
+cnt_credit_prolong int,
+amt_credit_sum FLOAT(20,10),
+amt_credit_sum_debt FLOAT(20,10),
+amt_credit_sum_limit FLOAT(20,10),
+amt_credit_sum_overdue FLOAT(20,10),
+credit_type varchar(255),
+days_credit_update int,
+amt_annuity FLOAT(20,10),
+month_balance int,
+new_status varchar(255));
+
