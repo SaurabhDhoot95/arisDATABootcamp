@@ -1,0 +1,12 @@
+{
+    "connURL": "jdbc:mysql://localhost:3306/demo",
+    "userName": "root",
+    "passWord": "password",
+    "mysqlTblName": "new_tbl_application_train",
+    "targetDir": "output/application_train",
+    "hiveTblName": "sqoop_workspace.application_train",
+    "hdfs_csv_location": "/user/saurabhdhoot95/csvFiles/",
+    "checkType": "hdfs",
+    "csvName": "POS_CASH_balance.csv",
+    "hiveDBname": "sqoop_workspace"
+}
